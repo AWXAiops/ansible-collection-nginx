@@ -7,7 +7,7 @@
       register: output
 
 - hosts: all
-  collections:
-    - nginxinc.nginx_core
+  #collections:
+    #- nginxinc.nginx_core
   roles:
     - role: nginx
