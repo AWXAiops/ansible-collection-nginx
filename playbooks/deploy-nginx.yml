@@ -6,7 +6,6 @@
       command: "ansible-galaxy collection install nginxinc.nginx_core"
       register: output
 
----
 - hosts: all
   gather_facts: no
   tasks:
