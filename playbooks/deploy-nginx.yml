@@ -7,14 +7,7 @@
       register: output
 
 - hosts: all
-  gather_facts: no
-  tasks:
-    - name: Include the example role
-      include_role:
-        name: nginx
-#---
-#- hosts: all
-  #collections:
-    #- nginxinc.nginx_core
-  #roles:
-    #- role: nginx
+  collections:
+    - nginxinc.nginx_core
+  roles:
+    - role: nginx
