@@ -4,7 +4,7 @@
   tasks:
     - name: install nginx collections
       #command: "ansible-galaxy collection install --roles-path /etc/ansible/roles nginxinc.nginx_core"
-      command: "ansible-galaxy collection install nginxinc.nginx_core"
+      command: "chdir=/etc/ansible/roles ansible-galaxy collection install nginxinc.nginx_core"
       register: output
 
 - hosts: all
