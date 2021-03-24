@@ -5,10 +5,12 @@
     - name: install nginx collections
       command: "ansible-galaxy collection install nginxinc.nginx_core"
       register: output
-
----
-- hosts: all
-  collections:
-    - nginxinc.nginx_core
-  roles:
-    - role: nginx
+    - name: Include the example role
+      include_role:
+        name: nginx
+#---
+#- hosts: all
+  #collections:
+    #- nginxinc.nginx_core
+  #roles:
+    #- role: nginx
