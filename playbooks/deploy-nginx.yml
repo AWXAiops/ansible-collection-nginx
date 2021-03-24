@@ -1,5 +1,13 @@
 ---
 - hosts: all
+  gather_facts: no
+  tasks:
+    - name: install nginx collections
+      command: "ansible-galaxy collection install nginxinc.nginx_core"
+      register: output
+
+---
+- hosts: all
   collections:
     - nginxinc.nginx_core
   roles:
